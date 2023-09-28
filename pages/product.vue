@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import TheProductsHeader from '../components/products/TheProductsHeader.vue'
-import TheProducts from '../components/products/TheProducts.vue'
+import TheProductsHeader from '@/components/products/TheProductsHeader.vue'
+import TheProducts from '@/components/products/TheProducts.vue'
 
 
 export default {
