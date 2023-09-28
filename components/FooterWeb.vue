@@ -1,34 +1,49 @@
 <template>
- <div class="footer-dark">
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Infromation History</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Contact person</h3>
-                        <ul>
-                            <li>Gmail : <a href="http://">dpttrndi88@gmail.com</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 item text">
-                        <h3>Profile Developer</h3>
-                        <p>Perkenalkan saya Dapit Triandi, saat ini saya sedang menempuh pendidikan S1 dibidang teknologi, dan project ini merupakan langkah saya untuk menjadi seorang software engginer.</p>
-                    </div>
-                    <div class="col item social">
-                        <a href="https://www.linkedin.com/dapittriandi"><i class="icon ion-social-linkedin"></i></a>
-                        <a href="https://www.github.com/dapittriandi"><i class="icon ion-social-github"></i></a>
-                        <a href="https://www.instagram/dpt_trndi"><i class="icon ion-social-instagram"></i></a></div>
-                </div>
-                <p class="copyright">Copyright&copy;2023 <i>Bumi Style</i></p>
-            </div>
-        </footer>
+  <footer class="section-p1" style="background-color: #ebebeb;">
+    <div>
+      <div class="col">
+        <h2>Bumi Style</h2>
+        <h4>Contact</h4>
+        <p><strong>Addres: </strong>Telanai Pura, Buluran Kenali, Street Harapan, Jambi</p>
+        <p><strong>phone: </strong>+62 823 **** ****/(+62) 823 **** ****</p>
+        <p><strong>Gmail: </strong><a href="mailto:dpttrndi88@gmail.com">dpttrndi88@gmail.com</a></p>
+        <div class="follow">
+          <h4>Follow us</h4>
+          <div class="icon">
+            <a href="https://www.linkedin.com/dapittriandi"><i class="icon ion-social-linkedin"></i></a>
+            <a href="https://www.github.com/dapittriandi"><i class="icon ion-social-github"></i></a>
+            <a href="https://www.instagram/dpt_trndi"><i class="icon ion-social-instagram"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="col">
+      <h4>About</h4>
+      <a href="/about">About Us</a>
+      <a href="/history">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="col">
+      <h4>My Account</h4>
+      <a href="/sign-up">Sign in</a>
+      <a href="#">View Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+    </div>
+    <div class="col profile">
+      <h4>Profile Developer</h4>
+      <p>Let me introduce myself, Dapit Triandi, I am currently studying for a bachelor's degree in technology, and this
+        project is my first step in becoming a software engineer.</p>
+    </div>
+    
+    <div class="copyright">
+      <p>© 2023.Bumi Style | Powered by DptTrndi</p>
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -36,99 +51,118 @@
 </script>
 
 <style scoped>
-.footer-dark {
-  padding:50px 0;
-  color:#f0f9ff;
-  background-color:#282d32de;
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
 }
 
-.footer-dark h3 {
-  margin-top:0;
-  margin-bottom:12px;
-  font-weight:bold;
-  font-size:16px;
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
 }
 
-.footer-dark ul {
-  padding:0;
-  list-style:none;
-  line-height:1.6;
-  font-size:14px;
-  margin-bottom:0;
+h4 {
+  font-size: 20px;
+  color: #222;
 }
 
-.footer-dark ul a {
-  color: inherit;
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer h4 {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer a {
+  font-size: 13px;
   text-decoration: none;
-  opacity:0.6;
+  color: #222;
+  margin-bottom: 10px;
 }
 
-.footer-dark ul a:hover {
-  opacity:0.8;
+footer .follow a i {
+  font-size: 25px;
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+  margin: 0 8px;
+  opacity: 0.75;
 }
 
-@media (max-width:767px) {
-  .footer-dark .item:not(.social) {
-    text-align:center;
-    padding-bottom:20px;
+footer .follow a i:hover,
+footer a i:hover {
+  color: #088178;
+  opacity: 0.8;
+}
+
+
+footer .profile p {
+  font-size: 15px;
+  color: #222;
+}
+
+
+footer .copyright {
+  border-top: 1px solid #2d2c2cb6;
+  padding-top: 20px;
+  width: 100%;
+  text-align: center;
+
+}
+
+@media (max-width:477px) {
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  footer .copyright {
+    text-align: start;
   }
 }
-
-.footer-dark .item.text {
-  margin-bottom:36px;
-}
-
-@media (max-width:767px) {
-  .footer-dark .item.text {
-    margin-bottom:0;
-  }
-}
-
-.footer-dark .item.text p {
-  opacity:0.6;
-  margin-bottom:0;
-}
-
-.footer-dark .item.social {
-  text-align:center;
-}
-
-@media (max-width:991px) {
-  .footer-dark .item.social {
-    text-align:center;
-    margin-top:20px;
-  }
-}
-
-.footer-dark .item.social > a {
-  font-size:20px;
-  width:36px;
-  height:36px;
-  line-height:36px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
-  margin:0 8px;
-  color:#fff;
-  opacity:0.75;
-}
-
-.footer-dark .item.social > a:hover {
-  opacity:0.9;
-}
-
-.footer-dark .copyright {
-  text-align:center;
-  color: #fff;
-  padding-top:24px;
-  opacity:0.3;
-  font-size:18px;
-  margin-bottom:0;
-}
-
-.footer-dark .copyright i {
-  font-weight: 500;
-}
-
 </style>

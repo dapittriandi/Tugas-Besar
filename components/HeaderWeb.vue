@@ -1,36 +1,69 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-    <h1><a class="navbar-brand" href="#">
-      Bumi Style
-    </a></h1>
-    </div>
-    <div id="navbarRightAlignExample" class="collapse navbar-collapse">
-      <!-- Left links -->
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Product</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">History</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li id="login" class="nav-item">
-          <a class="nav-link" href="#">Login</a>
-        </li>
-      </ul>
-      <!-- Left links -->
-    </div>
-  <!-- Container wrapper -->
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-sm">
+            <a class="navbar-brand" href="/">Bumi Style</a>
+            <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/product">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/history">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item" style="margin-top: 8px;">
+                        <a 
+                        href="/login" role="button" 
+                        class=" myMasuk" fdprocessedid="3mg1yo"> Masuk</a>
+                        <a 
+                        href="/sign-up" role="button" 
+                        class="myDaftar" fdprocessedid="3mg1yo"> Daftar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </template>
-
 <script>
+export default {
+    data() {
+        return {
+          
+        }
+    },
+    method: {
+
+    },
+    head() {
+        return {
+            link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' },
+            { rel: 'stylesheet', href: 'https://getbootstrap.com/docs/5.3/assets/css/docs.css' },
+            { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css' }
+            ],
+            scripts: [
+                { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js', body: true },
+                {
+                    src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', body: true
+                }]
+        }
+    }
+}
 </script>
 
 <style scoped>
@@ -38,23 +71,72 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
-    background: #e3e6f3;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    font-family: 'Merriweather Sans', sans-serif;
+    padding: 20px 0;
+    background-color: rgba(209, 209, 209, 0.305) !important;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.185);
     z-index: 999;
     position: sticky;
-    opacity: 0.9;
+    /* opacity: 0.9; */
     top: 0;
     left: 0;
 }
 
+
 .navbar-brand {
-  font-size: 30px;
-  font-style: italic;
+    font-size: 23px;
+    font-weight:  600;
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
-.navbar-nav .nav-item {
-  font-size: 18px;
-  font-family: 'attack', sans-serif;
+.nav-item {
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
+
+.navbar-light .nav-link {
+    color: rgb(0, 0, 0);
+    transition-duration: .3s;
+}
+.navbar-light .nav-link:hover {
+    color: #3877ff;
+}
+
+.myMasuk {
+    font-size: 18px; 
+    border-radius: 10px;   
+    outline: none;
+    padding: 6px 13px;
+    text-decoration: none;
+    color: #000000;
+    transition: 0.5s;
+}
+
+.myDaftar {
+    color: #fff; 
+    background-color: #3877ff; 
+    font-size: 18px; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.359);
+    padding: 7px 14px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.myMasuk:hover {
+    background-color: transparent;
+    border: 1px solid #000000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.359);
+    padding: 5px 12px;
+}
+.myDaftar:hover {
+    background-color: transparent;
+    color: #000000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.359);
+    border: 1px solid #000000;
+    padding: 5px 12px;
+}
+
 </style>
