@@ -51,12 +51,6 @@
 </script>
 
 <style scoped>
-h1 {
-  font-size: 50px;
-  line-height: 64px;
-  color: #222;
-}
-
 h2 {
   font-size: 46px;
   line-height: 54px;
@@ -66,11 +60,6 @@ h2 {
 h4 {
   font-size: 20px;
   color: #222;
-}
-
-h6 {
-  font-weight: 700;
-  font-size: 12px;
 }
 
 p {
@@ -84,7 +73,7 @@ p {
 }
 
 footer {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -131,7 +120,8 @@ footer .follow a i {
 }
 
 footer .follow a i:hover,
-footer a i:hover {
+footer a i:hover,
+footer a:hover {
   color: #088178;
   opacity: 0.8;
 }

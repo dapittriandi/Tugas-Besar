@@ -2,17 +2,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-sm">
             <a class="navbar-brand" href="/">Bumi Style</a>
-            <button 
-            class="navbar-toggler" 
-            type="button" 
-            data-toggle="collapse" 
-            data-target="#navbarSupportedContent" 
-            aria-controls="navbarSupportedContent" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+            <b-collapse id="nav-collapse" is-nav>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link " href="/">Home</a>
@@ -35,9 +26,11 @@
                         class="myDaftar" fdprocessedid="3mg1yo"> Daftar</a>
                     </li>
                 </ul>
-            </div>
+            </b-collapse>
         </div>
     </nav>
+
+   
 </template>
 <script>
 export default {

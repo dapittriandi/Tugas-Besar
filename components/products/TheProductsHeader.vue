@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div>
         <section id="product1" class="section-p1">
             <h2>Featured Products</h2>
             <p>Summer Collection New Morden Design</p>
@@ -43,10 +43,6 @@ p {
 
 body {
     width: 100%;
-}
-
-.container {
-    min-height: 80vh;
 }
 
 #product1 {

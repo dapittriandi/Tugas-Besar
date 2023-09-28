@@ -1,14 +1,9 @@
 <template>
     <div id="app">
         <TheProductsHeader />
-            <main class="container">
-                <div>
-                    <TheProducts 
-                    v-for="(product, index) in products" 
-                    :key="index" 
-                    :product="products"/>
-                </div>
-            </main>
+        <main class="productFor">
+                <TheProducts v-for="(product, index) in products" :key="index" :product="product" />
+        </main>
     </div>
 </template>
 
@@ -30,10 +25,17 @@ export default {
             products: []
         }
     },
-    async fetch () {
-    await this.$axios.$get('rest/v1/products')
-      .then((res) => { this.products = res.data })
-  },
+    async fetch() {
+        await this.$axios.$get('rest/v1/products', {
+            headers: {
+                "apikey": 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp5bHBhY2lvb3hhcmhlbHdzbGppIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU3MjIxODYsImV4cCI6MjAxMTI5ODE4Nn0.DxbkTiy25jW5QSd3FgEvZm2G21JzU9kbcBSCdkOvmrU'
+            }
+        })
+            .then((res) => {
+                res.map((data) =>
+                    this.products.push(data))
+            })
+    },
     head() {
         return {
             link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -44,26 +46,14 @@ export default {
             ]
         }
     },
-  mounted () {
-    // eslint-disable-next-line no-console
-    console.log('Product: ', this.products)
-  },
+    mounted() {
+        // eslint-disable-next-line no-console
+        console.log('product: ', this.products)
+    },
 }
 </script>
 
 <!-- <style scoped>
-/* .container {
-    height: 83vh;
-    width: 100%;
-    margin-bottom: 0.1rem;
-    background: #183663;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-
 h1 {
     font-size: 50px;
     line-height: 64px;
