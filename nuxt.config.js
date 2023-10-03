@@ -16,7 +16,7 @@ export default {
     {rel: 'preconnect', href: 'https://fonts.gstatic.com'},
     {rel: 'stylesheet', href: 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css'},
     {rel: 'preconnect', href: 'https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap'},
-    {rel: 'stylesheet', href: 'https://https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,500;1,500&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,500&display=swap'}
+    {rel: 'stylesheet', href: 'https://https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,500;1,500&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,500&display=swap'},
   ],
   scripts: [
     { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js', body: true},
@@ -51,12 +51,14 @@ export default {
     '@nuxtjs/pwa',
        // https://go.nuxtjs.dev/tailwindcss
        '@nuxtjs/tailwindcss',
+       '@nuxtjs/auth',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: 'https://jylpaciooxarhelwslji.supabase.co', // Your API base URL
+    baseURL: '127.0.0.1:3333/api',
+    baseURL2: 'https://jylpaciooxarhelwslji.supabase.co', // Your API base URL
     Headers: {
       common: {
         apiKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp5bHBhY2lvb3hhcmhlbHdzbGppIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU3MjIxODYsImV4cCI6MjAxMTI5ODE4Nn0.DxbkTiy25jW5QSd3FgEvZm2G21JzU9kbcBSCdkOvmrU', // Example Authorization header
@@ -73,4 +75,17 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  auth: {
+      strategies: {
+        local: {
+          endpoints: {
+            login: { url: 'login', method: 'post', propertyName: 'data.token' },
+            user: { url: 'me', method: 'get', propertyName: 'data' },
+          	logout: false
+         }
+       }
+      }
+  }
 }
+

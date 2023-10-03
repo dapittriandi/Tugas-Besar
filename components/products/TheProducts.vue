@@ -14,7 +14,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>Rp.{{ product.harga }}</h4>
+                        <h4>Rp.{{ product.harga }}.000</h4>
                     </div>
                     <a href="#"><i class="fal fa-shopping-cart cart"></i></a> 
                 </div>

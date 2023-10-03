@@ -9,7 +9,7 @@
         <p><strong>Gmail: </strong><a href="mailto:dpttrndi88@gmail.com">dpttrndi88@gmail.com</a></p>
         <div class="follow">
           <h4>Follow us</h4>
-          <div class="icon">
+          <div class="icon" style="margin-left: 5px;">
             <a href="https://www.linkedin.com/dapittriandi"><i class="icon ion-social-linkedin"></i></a>
             <a href="https://www.github.com/dapittriandi"><i class="icon ion-social-github"></i></a>
             <a href="https://www.instagram/dpt_trndi"><i class="icon ion-social-instagram"></i></a>
@@ -103,7 +103,7 @@ footer a {
   margin-bottom: 10px;
 }
 
-footer .follow a i {
+footer .follow.icon a i {
   font-size: 25px;
   color: #465b52;
   padding-right: 4px;
@@ -128,8 +128,9 @@ footer a:hover {
 
 
 footer .profile p {
-  font-size: 15px;
+  font-size: 13px;
   color: #222;
+  margin-bottom: 10px;
 }
 
 
@@ -138,7 +139,8 @@ footer .copyright {
   padding-top: 20px;
   width: 100%;
   text-align: center;
-
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
 }
 
 @media (max-width:477px) {

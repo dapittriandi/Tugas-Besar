@@ -5,8 +5,8 @@
             <h2>Sustainable <span class="text1">Clothing</span> with a <br> <span class="text2">Creative</span> touch.</h2>
 <a href="/product">Shop Now</a>
         </div>
-        <div class="all-card">
-            <div class="card-group" style=" margin-top: 1px;">
+        <div class="all-card" style=" margin-top: 1px;">
+            <div class="card-group" >
                 <div class="card card1">
                     <img src="~/assets/cloth9.jpg" class="card-img" alt="">
                 </div>
@@ -36,7 +36,7 @@
         </div>
        
     </div>
-     <section id="newsletter" class="section-p1 section-m1">
+     <section id="newsletter" class="section-p1 section-m1" style="margin-top: 3px;">
             <div class="newstext">
                 <h4>Sign Up For Newsletters</h4>
                 <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
