@@ -140,7 +140,6 @@ footer .copyright {
   width: 100%;
   text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 20px;
 }
 
 @media (max-width:477px) {
